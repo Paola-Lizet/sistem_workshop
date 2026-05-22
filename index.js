@@ -16,7 +16,8 @@ app.get("/", (req, res) => res.status(200).json({ message: "Bienvenido al sistem
 app.use("/user", user);
 
 // Rutas protegidas solo para usuarios con tokens
-app.use(auth); 
+//app.use(auth); 
+app.use((req, res, next) => { next(); }); // Pon esto en su lugar
 app.use("/empleados", empleados);
 
 app.listen(process.env.PORT || 3000, () => {
