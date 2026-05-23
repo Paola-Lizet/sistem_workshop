@@ -5,7 +5,7 @@ const cors = require('cors');
 const path = require('path'); 
 
 // Acceso a archivos 
-const empleados = require('./routes/empleados');
+const empleados = require('./routes/empRoutes');
 const user = require('./routes/user');
 const auth = require('./middleware/auth');
 
